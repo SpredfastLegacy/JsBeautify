@@ -1,0 +1,4 @@
+[{
+	"keys": ["super+alt+j"],
+	"command": "js_beautify"
+}]
