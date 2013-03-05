@@ -1,5 +1,15 @@
-import jsbeautifier, os, re, sublime, sublime_plugin, sys
-sys.path.insert(0, os.getcwd())
+import os, re, sublime, sublime_plugin, sys
+
+# this import code taken from the JsFormat plugin by Davis Clark (https://github.com/jdc0589/JsFormat)
+# craziness to get jsbeautifier.unpackers to actually import
+# with sublime's weird hackery of the path and module loading
+directory = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(os.path.join(directory, "jsbeaufifier"))
+sys.path.append(os.path.join(directory, "jsbeautifier", "unpackers"))
+
+# if you don't explicitly import jsbeautifier.unpackers here things will bomb out,
+# even though we don't use it directly.....
+import jsbeautifier, jsbeautifier.unpackers
 
 s = sublime.load_settings("JsBeautify.sublime-settings")
 
