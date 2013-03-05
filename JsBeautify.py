@@ -1,4 +1,5 @@
-import re, sublime, sublime_plugin, jsbeautifier
+import jsbeautifier, os, re, sublime, sublime_plugin, sys
+sys.path.insert(0, os.getcwd())
 
 s = sublime.load_settings("JsBeautify.sublime-settings")
 

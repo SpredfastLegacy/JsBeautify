@@ -1,0 +1,40 @@
+[{
+    "caption": "Preferences",
+    "mnemonic": "n",
+    "id": "preferences",
+    "children": [{
+        "caption": "Package Settings",
+        "mnemonic": "P",
+        "id": "package-settings",
+        "children": [{
+            "caption": "JsBeautify",
+            "children": [{
+                "command": "open_file",
+                "args": {
+                    "file": "${packages}/JsBeautify/JsBeautify.sublime-settings"
+                },
+                "caption": "Settings – Default"
+            }, {
+                "command": "open_file",
+                "args": {
+                    "file": "${packages}/User/JsBeautify.sublime-settings"
+                },
+                "caption": "Settings – User"
+            }, {
+                "caption": "-"
+            }, {
+                "command": "open_file",
+                "args": {
+                    "file": "${packages}/JsBeautify/Default ($platform).sublime-keymap"
+                },
+                "caption": "Keybindings – Default"
+            }, {
+                "command": "open_file",
+                "args": {
+                    "file": "${packages}/User/Default ($platform).sublime-keymap"
+                },
+                "caption": "Keybindings – User"
+            }]
+        }]
+    }]
+}]
